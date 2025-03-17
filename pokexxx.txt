@@ -1,0 +1,268 @@
+package pokemon;
+import java.util.Scanner;
+
+public class EjercicioIntegrador {
+
+   
+    public static void main(String[] args) throws InterruptedException {
+        int opcion,juego_terminado,conocer,invalido;
+        String cambionombre, newnombre;
+        juego_terminado=0;
+        Scanner entrada=new Scanner(System.in);
+        Scanner letras = new Scanner(System.in);
+        ELECCION eleccion = new ELECCION();
+        Bulbasaur BULBASAUR = new Bulbasaur(30,25,120,1,1,"Bulbasaur","UNKNOW");
+        Squirtle SQUIRTLE = new Squirtle(30,25,120,1,1,"Squirtle","UNKNOW");
+        Charmander CHARMANDER = new Charmander(30,25,120,1,1,"CHARMANDER","UNKNOW");
+        Pikachu PIKACHU = new Pikachu(30,25,120,1,1,"Pikachu","UNKNOW");
+        
+        while(juego_terminado==0){
+            System.out.println("\t\tELIGE TU PRIMER POKEMON");
+            System.out.println("\t\t1. Bulbasaur");
+            System.out.println("\t\t2. Charmander");
+            System.out.println("\t\t3. Squirtle");
+            System.out.println("\t\t4. Pikachu");
+            opcion = entrada.nextInt();
+            eleccion.Atrapar();
+            switch(opcion){
+                case 1:
+                    do{
+                        System.out.println("\t\tTu primer Pokemon es: "+BULBASAUR.getNombre());
+                        System.out.println("\t\tSus Datos Son: ");
+                        System.out.println("\t\tNombre: "+BULBASAUR.getNombre()+" \n"+"\t\tAltura"+BULBASAUR.getAltura()+" \n"+"\t\tSu peso"+BULBASAUR.getPeso());
+                        System.out.println("\t\tDeseas cambiarle el nombre? \t\t\n Si o No");
+                        cambionombre= letras.nextLine();
+                        if((cambionombre.equals("SI"))||(cambionombre.equals("si"))||(cambionombre.equals("Si"))){
+                            System.out.println("\t\tComo deseas llamarlo? ");
+                            newnombre=letras.nextLine();
+                            BULBASAUR.setNombre(newnombre);
+                            System.out.println("\t\tTu bulbasaur se llama: " + BULBASAUR.getNombre());
+                            
+                        }
+                        System.out.println("\t\t¿Quieres saber que ataques conoce?");
+                        System.out.println("\t\t1. Si 2. NO");
+                        conocer = entrada.nextInt();
+                        switch(conocer){
+                            case 1:
+                                BULBASAUR.Nombre();
+                                BULBASAUR.AtaquePlacaje();
+                                BULBASAUR.AtaqueMordisco();
+                                BULBASAUR.AtaqueParalizar();
+                                BULBASAUR.AtaqueDrenaje();
+                                BULBASAUR.AtaqueAraniazo();
+                                BULBASAUR.AtaqueLatigazo();
+                                BULBASAUR.AtaqueHojaAfilada();
+                                BULBASAUR.AtaqueDerribo();
+                                invalido=0;
+                                try{
+                                    Thread.sleep(5000);
+                                    
+                                }catch(InterruptedException e){
+                                    System.out.println("\t\tBAI BAI");
+                                }
+                                break;
+                            case 2:
+                               BULBASAUR.Nombre();
+                                invalido=0;
+                                try{
+                                    Thread.sleep(5000);
+                                    
+                                }catch(InterruptedException e){
+                                    System.out.println("\t\tBAI BAI");
+                                }
+                                break;
+                            default:
+                               System.out.println("\t\topcion invalida");
+                               invalido=1;
+                               try{
+                                    Thread.sleep(5000);
+                                    
+                                }catch(InterruptedException e){
+                                    System.out.println("\t\tBAI BAI");
+                                }
+                        }
+                    }while(invalido!=0);
+                    break;
+                case 2:
+                    do{
+                        System.out.println("\t\tTu primer Pokemon es: "+CHARMANDER.getNombre());
+                        System.out.println("\t\tSus Datos Son: ");
+                        System.out.println("\t\tNombre: "+CHARMANDER.getNombre()+" \n"+"Altura"+CHARMANDER.getAltura()+" \n"+"Su peso"+SQUIRTLE.getPeso());
+                        System.out.println("\t\tDeseas cambiarle el nombre? \n Si o No");
+                        cambionombre= letras.nextLine();
+                        if((cambionombre.equals("SI"))||(cambionombre.equals("si"))||(cambionombre.equals("Si"))){
+                            System.out.println("\t\tComo deseas llamarlo? ");
+                            newnombre=letras.nextLine();
+                            CHARMANDER.setNombre(newnombre);
+                            System.out.println("\t\tTu bulbasaur se llama: " + CHARMANDER.getNombre());
+                            
+                        }
+                        System.out.println("\t\t¿Quieres saber que ataques conoce?");
+                        System.out.println("\t\t1. Si 2. NO");
+                        conocer = entrada.nextInt();
+                        switch(conocer){
+                            case 1:
+                                CHARMANDER.Nombre();
+                                CHARMANDER.AtaquePlacaje();
+                                CHARMANDER.AtaqueMordisco();
+                                CHARMANDER.AtaqueParalizar();
+                                CHARMANDER.AtaqueDrenaje();
+                                CHARMANDER.AtaqueAraniazo();
+                                CHARMANDER.AtaqueInfierno();
+                                CHARMANDER.AtaqueGiroFuego();
+                                CHARMANDER.AtaqueCuchillada();
+                                invalido=0;
+                                try{
+                                    Thread.sleep(5000);
+                                    
+                                }catch(InterruptedException e){
+                                    System.out.println("\t\tBAI BAI");
+                                }
+                                break;
+                            case 2:
+                                CHARMANDER.Nombre();
+                                invalido=0;
+                                try{
+                                    Thread.sleep(5000);
+                                    
+                                }catch(InterruptedException e){
+                                    System.out.println("\t\tBAI BAI");
+                                }
+                                break;
+                            default:
+                               System.out.println("\t\topcion invalida");
+                               invalido=1;
+                               try{
+                                    Thread.sleep(5000);
+                                    
+                                }catch(InterruptedException e){
+                                    System.out.println("\t\tBAI BAI");
+                                }
+                               
+                        }
+                    }while(invalido!=0);
+                    break;
+                case 3:
+                    do{
+                       System.out.println("\t\tTu primer Pokemon es: "+SQUIRTLE.getNombre());
+                        System.out.println("\t\tSus Datos Son: ");
+                        System.out.println("\t\tNombre: "+SQUIRTLE.getNombre()+" \n"+"Altura"+SQUIRTLE.getAltura()+" \n"+"Su peso"+SQUIRTLE.getPeso());
+                        System.out.println("\t\tDeseas cambiarle el nombre? \n Si o No");
+                        cambionombre= letras.nextLine();
+                        if((cambionombre.equals("SI"))||(cambionombre.equals("si"))||(cambionombre.equals("Si"))){
+                            System.out.println("\t\tComo deseas llamarlo? ");
+                            newnombre=letras.nextLine();
+                            SQUIRTLE.setNombre(newnombre);
+                            System.out.println("\t\tTu bulbasaur se llama: " + SQUIRTLE.getNombre());
+                            
+                        }
+                        System.out.println("\t\t¿Quieres saber que ataques conoce?");
+                        System.out.println("\t\t1. Si 2. NO");
+                        conocer = entrada.nextInt();
+                        switch(conocer){
+                            case 1:
+                                SQUIRTLE.Nombre();
+                                SQUIRTLE.AtaquePlacaje();
+                                SQUIRTLE.AtaqueMordisco();
+                                SQUIRTLE.AtaqueParalizar();
+                                SQUIRTLE.AtaqueDrenaje();
+                                SQUIRTLE.AtaqueAraniazo();
+                                SQUIRTLE.AtaqueBurbuja();
+                                SQUIRTLE.AtaqueCabezazo();
+                                SQUIRTLE.AtaqueHidrobomba();
+                                invalido=0;
+                                try{
+                                    Thread.sleep(5000);
+                                    
+                                }catch(InterruptedException e){
+                                    System.out.println("\t\tBAI BAI");
+                                }
+                                break;
+                            case 2:
+                                SQUIRTLE.Nombre();
+                                invalido=0;
+                                try{
+                                    Thread.sleep(5000);
+                                    
+                                }catch(InterruptedException e){
+                                    System.out.println("\t\tBAI BAI");
+                                }
+                                break;
+                            default:
+                               System.out.println("\t\topcion invalida");
+                               invalido=1;
+                               try{
+                                    Thread.sleep(5000);
+                                    
+                                }catch(InterruptedException e){
+                                    System.out.println("\t\tBAI BAI");
+                                }
+                               
+                        }
+                    }while(invalido!=0);
+                    break;
+                case 4:
+                    do{
+                        System.out.println("\t\tTu primer Pokemon es: "+PIKACHU.getNombre());
+                        System.out.println("\t\tSus Datos Son: ");
+                        System.out.println("\t\tNombre: "+PIKACHU.getNombre()+" \n"+"Altura"+PIKACHU.getAltura()+" \n"+"Su peso"+PIKACHU.getPeso());
+                        System.out.println("\t\tDeseas cambiarle el nombre? \n Si o No");
+                        cambionombre= letras.nextLine();
+                        if((cambionombre.equals("SI"))||(cambionombre.equals("si"))||(cambionombre.equals("Si"))){
+                            System.out.println("\t\tComo deseas llamarlo? ");
+                            newnombre=letras.nextLine();
+                            PIKACHU.setNombre(newnombre);
+                            System.out.println("\t\tTu bulbasaur se llama: " + PIKACHU.getNombre());
+                            
+                        }
+                        System.out.println("\t\t¿Quieres saber que ataques conoce?");
+                        System.out.println("\t\t1. Si 2. NO");
+                        conocer = entrada.nextInt();
+                        switch(conocer){
+                            case 1:
+                                PIKACHU.Nombre();
+                                PIKACHU.AtaquePlacaje();
+                                PIKACHU.AtaqueMordisco();
+                                PIKACHU.AtaqueParalizar();
+                                PIKACHU.AtaqueDrenaje();
+                                PIKACHU.AtaqueAraniazo();
+                                PIKACHU.AtaqueChispazo();
+                                PIKACHU.AtaqueChispa();
+                                PIKACHU.AtaqueBolaVoltio();
+                                invalido=0;
+                                try{
+                                    Thread.sleep(5000);
+                                    
+                                }catch(InterruptedException e){
+                                    System.out.println("\t\tBAI BAI");
+                                }
+                                break;
+                            case 2:
+                               PIKACHU.Nombre();
+                                invalido=0;
+                                try{
+                                    Thread.sleep(5000);
+                                    
+                                }catch(InterruptedException e){
+                                    System.out.println("\t\tBAI BAI");
+                                }
+                                break;
+                            default:
+                               System.out.println("\t\topcion invalida");
+                               invalido=1;
+                               try{
+                                    Thread.sleep(5000);
+                                    
+                                }catch(InterruptedException e){
+                                    System.out.println("\t\tBAI BAI");
+                                }
+                               
+                        }
+                    }while(invalido!=0);
+                    break;
+            }
+        }
+        
+    }
+    
+}
